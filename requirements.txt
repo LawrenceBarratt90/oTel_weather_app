@@ -1,0 +1,8 @@
+langgraph
+langchain-ollama
+httpx
+python-dotenv
+opentelemetry-sdk
+opentelemetry-exporter-otlp-proto-http
+opentelemetry-instrumentation-httpx
+opentelemetry-instrumentation-langchain
