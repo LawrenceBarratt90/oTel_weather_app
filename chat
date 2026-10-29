@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+# Convenience launcher: run the chat app with the project's virtualenv, from any directory.
+# Dynatrace settings are read from .env (see .env.example); traces are sent while you chat.
 cd "$(dirname "$0")" && exec .venv/bin/python app.py "$@"

@@ -1,4 +1,8 @@
+# Real credentials (Dynatrace token): keep local only, use .env.example as the template
 .env
+# Python virtualenv: recreate with the steps in README.md
 .venv/
+# Python bytecode cache
 __pycache__/
+# Log of the dedicated Ollama started by start-ollama.sh
 ollama.log

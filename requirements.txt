@@ -1,8 +1,11 @@
-langgraph
-langchain-ollama
-httpx
-python-dotenv
-opentelemetry-sdk
-opentelemetry-exporter-otlp-proto-http
-opentelemetry-instrumentation-httpx
-opentelemetry-instrumentation-langchain
+# --- App ---
+langgraph                                  # the workflow (graph) the chat runs on
+langchain-ollama                           # ChatOllama: talks to the local Ollama model
+httpx                                      # HTTP client for the weather API (auto-traced)
+python-dotenv                              # loads .env (Dynatrace endpoint/token, model settings)
+
+# --- OpenTelemetry -> Dynatrace ---
+opentelemetry-sdk                          # core tracing SDK (spans, resource, batching)
+opentelemetry-exporter-otlp-proto-http     # sends spans to Dynatrace over OTLP/HTTP
+opentelemetry-instrumentation-langchain    # auto-traces LangChain/LangGraph + LLM calls (gen_ai.* attributes)
+opentelemetry-instrumentation-httpx        # auto-traces outgoing httpx HTTP calls
